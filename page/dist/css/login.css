@@ -1,0 +1,99 @@
+
+
+.login-warp{
+	width: 100%;
+	height: 520px;
+	background: url(../resource/1.jpg) 0 0 no-repeat;
+	background-size: cover;
+}
+
+.login-main-warp{
+	width: 350px;
+	height: 360px;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	position: absolute;
+	right: 0;
+	top: 78px;
+}
+.login-main-center{
+	padding: 15px 25px;
+}
+.login-main-title{
+	font-size: 20px;
+
+}
+.login-input-warp{
+	display: flex;
+	align-items: center;
+	height: 30px;
+	position:relative;
+	border: 1px solid #000;
+}
+.login-input-warp .login-input-left{
+	position: absolute;
+	height: 30px;
+	width: 100%;
+	left: 0;
+	top: 0;
+	display: flex;
+	align-items: center;
+}
+.login-but{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.login-input-right{
+	height: 30px;
+	flex: 1;
+
+}
+.login-input-right input{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	border: 0;
+}
+.login-sub{
+	width: 100%;
+	height: 45px;
+	background: #ee3388;
+	text-align: center;
+	line-height: 45px;
+	color: #fff;
+	font-size: 18px;
+	margin-top: 20px;
+	cursor: pointer;
+}
+.login-input-mask-left{
+	width: 20px;
+	height: 20px;
+	background-image:url(../resource/user-bg.png);
+	
+	background-repeat: no-repeat;
+	margin-left: 10px;
+}
+.login-input-mask-left.name{
+	background-position: 0 0;
+}
+.login-input-mask-left.password{
+	background-position: 0 -40px;
+}
+.login-input-mask-right{
+	height: 30px;
+	line-height: 30px;
+	box-sizing: border-box;
+	padding-left: 10px;
+	color: #ccc;
+	font-size: 14px;
+}
+.login-error-msg{
+	color: #f00;
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+	text-align: center;
+	margin: 10px 0; 
+}
