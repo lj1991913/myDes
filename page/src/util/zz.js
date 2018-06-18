@@ -1,8 +1,8 @@
 'use strict';
-var Hogan = '' ;//require('hogan');
+var Hogan =require('hogan.js'); //require('hogan');
 var serverHost={
 	host :'' //请求地址的host
-}
+};
 var _zz ={
 	//网络请求
 	request : function(options){
@@ -24,7 +24,7 @@ var _zz ={
 			error : function(res){
 				typeof options.error === 'function' && options.error(err.statusText);
 			}
-		})
+		});
 	},
 	//获取服务器地址
 	getServerHost : function(){

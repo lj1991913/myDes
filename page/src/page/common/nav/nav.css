@@ -1,0 +1,87 @@
+
+.page-nav{
+	height: 70px;
+	display: flex;
+	align-items: center;
+}
+.logo{
+	width: 200px;
+	height: 70px;
+}
+.search-warp{
+	width: 465px;
+	height: 42px;
+	border: 2px solid #DD3377;
+	display: flex;
+	align-items: center;
+	background: #fff;
+}
+.search-left{
+	position: relative;
+	height: 42px;
+	width: 110px;
+	padding-left: 10px;
+	display: flex;
+	align-items: center;
+	border-right: 1px solid #dd3377;
+}
+.search-left span{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-top: 1px solid #DD3377;
+	border-right: 1px solid #DD3377;
+	transition:  all 0.5s;
+	transform:  rotate(-45deg);
+	top: 50%;
+	margin-top: -5px;
+	right: 10px;
+	cursor: pointer;
+}
+.search-left span.active{
+	transform:  rotate(135deg);
+}
+.search-but{
+	height: 42px;
+	width: 42px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-left: 1px solid #dd3377;
+}
+.search-right{
+	flex: 1;
+	height: 42px;
+}
+.search-right input{
+	border: 0;
+	width: 100%;
+	height: 42px;
+	padding-left: 10px;
+	font-size: 14px;
+}
+.searchDown{
+	width: 110px;
+	position: absolute;
+	left: -1px;
+	top: 43px;
+	border: 1px solid #dd3377;
+	padding: 5px;
+	background: #fff;
+	z-index: 1000;
+	display: none;
+}
+.searchDown li{
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+	font-size: 14px;
+	color: #333;
+	cursor: pointer;
+}
+.searchDown li:hover{
+	cursor: pointer;
+	background: #ccc;
+	color: #fff;
+}

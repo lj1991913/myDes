@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%= require('html-loader!./layout/head-comm.html') %>
+	<title>注册</title>
+</head>
+<body>
+	<%= require('html-loader!./layout/top-comm-reg.html') %>
+
+	<div class="warp-main">
+		<div class="reg-list">
+			<div class="reg-left"><span>*</span>用户名：</div>
+			<div class="reg-right">
+				<div id="nameMask" class="reg-right-abs">
+					请设置用户名
+				</div>
+				<div class="reg-right-input-warp">
+					<input id="name" type="text">
+				</div>
+			</div>
+		</div>
+
+		<div class="reg-list">
+			<div class="reg-left"><span>*</span>手机号：</div>
+			<div class="reg-right">
+				<div id="phoneMask" class="reg-right-abs">
+					用于登录和找回密码
+				</div>
+				<div class="reg-right-input-warp">
+					<input id="phone" type="text">
+				</div>
+			</div>
+		</div>
+
+
+		<div class="reg-list hig">
+			<div class="reg-left"><span>*</span>密码：</div>
+			<div class="reg-right">
+				<div id="passwordMask" class="reg-right-abs">
+					输入8-16位密码，由数字字母组成
+				</div>
+				<div id="passwordLv" class="password-lv">
+					<div class="password-list a1">弱</div>
+					<div class="password-list a2">中</div>
+					<div class="password-list a3">强</div>
+				</div>
+				<div class="reg-right-input-warp">
+					<input id="password" maxlength="16" type="password">
+				</div>
+			</div>
+		</div>
+
+
+		<div class="reg-list">
+			<div class="reg-left"><span>*</span>手机号：</div>
+			<div class="reg-right">
+				<div id="apasswordMask" class="reg-right-abs">
+					请再次输入密码
+				</div>
+				<div class="reg-right-input-warp">
+					<input id="apassword" type="password">
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="reg-fuwu suojin">
+			<input type="checkbox" id="a1"> <label for="a1">我以阅读并接受 <a href="javascirpt:;">《艾尔薇拉旅游网会员服务条款》</a></label> 
+		</div>
+
+		<div id="sub" class="reg-sub suojin">
+			同意服务条款并注册
+		</div>
+
+		<div class="isReg suojin">
+			已有账号，<a href="login.html">直接登录></a>			
+		</div>
+
+	</div>
+
+	<%= require('html-loader!./layout/fot-comm.html') %>
+</body>
+</html>

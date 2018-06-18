@@ -35,6 +35,11 @@ var page ={
 			$(this).closest('.login-input-warp').find('input').focus();
 		});
 
+		$('#maskPassword').click(function(){
+			$(this).hide();
+			$(this).closest('.login-input-warp').find('input').focus();
+		});
+
 	},
 	checkInput : function(){
 		 var name,password,$name,$password;
@@ -54,7 +59,7 @@ var page ={
 			username : $.trim($('#username').val()),
 			password : $.trim($('#password').val()),
 		},
-		validateResult = this.formValidate(fromData);
+		 validateResult = this.formValidate(fromData);
 		if(validateResult.status){
 			showMsg.hide();
 			_user.login(fromData,function(res){

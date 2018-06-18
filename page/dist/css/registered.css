@@ -1,0 +1,102 @@
+
+.reg-list{
+	width: 400px;
+	margin: 10px 0;
+	height: 35px;
+	line-height: 35px;
+	display: flex;
+	align-items: center;
+}
+.reg-list.hig{
+	height: 60px;
+	align-items: flex-start;
+}
+.reg-left{
+	width: 100px;
+	height: 35px;
+	line-height: 35px;
+	font-weight: bold;
+	color: #333;
+}
+.reg-left span{
+	color: #f00;
+}
+.reg-right{
+	flex: 1;
+	position: relative;
+	height: 35px;
+	line-height: 35px;
+	border:1px solid #ccc;
+}
+.reg-right .reg-right-abs{
+	position: absolute;
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	color: #333;
+	font-size: 14px;
+	box-sizing: border-box;
+	padding-left: 10px;
+	color: #333;
+}
+
+.reg-right input{
+	height: 35px;
+	line-height: 35px;
+	border:0;
+	width: 100%;
+}
+.password-lv{
+	position: absolute;
+	left: -4px;
+	bottom: -23px;
+	width: 100%;
+	height: 20px;
+	display: flex;
+}
+.password-lv .password-list{
+	flex: 1;
+	height: 20px;
+	background: #ddd;
+	color: #fff;
+	text-align: center;
+	line-height: 20px;
+	color: #fff;
+	margin-left: 4px;
+}
+.password-lv .password-list.a1.active{
+	background: #fff771;
+}
+.password-lv .password-list.a2.active{
+	background: #ffbc54;
+}
+.password-lv .password-list.a3.active{
+	background: #6bd031;
+}
+.suojin{
+	box-sizing: border-box;
+	margin: 10px 0;
+	margin-left: 100px;
+}
+.reg-fuwu a{
+	color: #29e;
+}
+.reg-fuwu a:hover{
+	color: #f80;text-decoration:underline;
+}
+
+.reg-sub{
+	width: 250px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-radius: 5px;
+	color: #fff;
+	background: #ee3388;
+	font-size: 20px;
+	cursor: pointer;
+
+}
+.isReg a{
+	color:#29e;
+}

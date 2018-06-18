@@ -43,7 +43,7 @@
 .login-but{
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: space-between;
 }
 .login-input-right{
 	height: 30px;

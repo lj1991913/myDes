@@ -3,21 +3,21 @@ webpackJsonp([2],{
 /***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(86);
+	module.exports = __webpack_require__(93);
 
 
 /***/ }),
 
-/***/ 86:
+/***/ 93:
 /***/ (function(module, exports, __webpack_require__) {
 
 	
 
 	'use strict';
 
-	__webpack_require__(87);
-	var _user = __webpack_require__(92);
-	var _zz = __webpack_require__(93);
+	__webpack_require__(94);
+	var _user = __webpack_require__(99);
+	var _zz = __webpack_require__(11);
 
 	var showMsg ={
 		show : function(msg){
@@ -48,6 +48,11 @@ webpackJsonp([2],{
 				$(this).closest('.login-input-warp').find('input').focus();
 			});
 
+			$('#maskPassword').click(function(){
+				$(this).hide();
+				$(this).closest('.login-input-warp').find('input').focus();
+			});
+
 		},
 		checkInput : function(){
 			 var name,password,$name,$password;
@@ -67,7 +72,7 @@ webpackJsonp([2],{
 				username : $.trim($('#username').val()),
 				password : $.trim($('#password').val()),
 			},
-			validateResult = this.formValidate(fromData);
+			 validateResult = this.formValidate(fromData);
 			if(validateResult.status){
 				showMsg.hide();
 				_user.login(fromData,function(res){
@@ -107,21 +112,21 @@ webpackJsonp([2],{
 
 /***/ }),
 
-/***/ 87:
+/***/ 94:
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 92:
+/***/ 99:
 /***/ (function(module, exports, __webpack_require__) {
 
 	
 
 	'use strict';
 
-	var _zz = __webpack_require__(93);
+	var _zz = __webpack_require__(11);
 
 	var _user ={
 		//用户登录
@@ -156,83 +161,6 @@ webpackJsonp([2],{
 		}
 	}
 	module.exports = _user;
-
-/***/ }),
-
-/***/ 93:
-/***/ (function(module, exports) {
-
-	'use strict';
-	var Hogan = '' ;//require('hogan');
-	var serverHost={
-		host :'' //请求地址的host
-	}
-	var _zz ={
-		//网络请求
-		request : function(options){
-			var that = this;
-			$.ajax({
-				type : options.method || 'GET',
-				url : options.url || '',
-				dataType : options.dataType || 'json',
-				data : options.data || {},
-				success : function(res){
-					if(res.code == 200){ //请求成功
-						typeof options.success === 'function' && options.success(res.data,res.msg);
-					}else if(res.code == 401){ //登录超时
-						that.doLogin();
-					}else{//请求失败
-						typeof options.error === 'function' && options.error(res.msg)
-					}
-				},
-				error : function(res){
-					typeof options.error === 'function' && options.error(err.statusText);
-				}
-			})
-		},
-		//获取服务器地址
-		getServerHost : function(){
-			return serverHost.host;
-		},
-		getUrlParam : function(name){
-			var reg     = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
-	        var result  = window.location.search.substr(1).match(reg);
-	        return result ? decodeURIComponent(result[2]) : null;
-		},
-		//渲染html
-		renderHtml : function(htmlTemplate,data){
-			var template = Hogan.compile(htmlTemplate),
-				result = template.render(data);
-			return result;
-		},
-		successTip : function(msg){
-			alert(msg || '操作成功！');
-		},
-		errorTip : function(msg){
-			alert(msg || '出问题了~');
-		},
-		validate : function(value,type){
-			var val = $.trim(value);
-			if(type === 'name'){ //用户名
-				var a1 =  "^[a-zA-Z\u4e00-\u9fa5]+$";
-				var re = new RegExp(a1);
-				if(re.test(val)){
-					//正确
-				}else{
-					return false;
-				}
-			}
-		},
-		doLogin : function(){
-			window.location.href='./login.html'
-		},
-		goHome : function(){
-			window.location.href='./index.html'
-		}
-
-
-	}
-	module.exports = _zz;
 
 /***/ })
 

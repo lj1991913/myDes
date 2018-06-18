@@ -3,7 +3,7 @@
 .login-warp{
 	width: 100%;
 	height: 520px;
-	background: url(../resource/1.jpg) 0 0 no-repeat;
+	background: url(/resource/1.jpg) 0 0 no-repeat;
 	background-size: cover;
 }
 
@@ -43,7 +43,7 @@
 .login-but{
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: space-between;
 }
 .login-input-right{
 	height: 30px;
@@ -70,7 +70,7 @@
 .login-input-mask-left{
 	width: 20px;
 	height: 20px;
-	background-image:url(../resource/user-bg.png);
+	background-image:url(/resource/user-bg.png);
 	
 	background-repeat: no-repeat;
 	margin-left: 10px;
