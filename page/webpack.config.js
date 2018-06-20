@@ -23,6 +23,7 @@ var config = {
         'index': ['./src/page/index/index.js'],
         'login': ['./src/page/login/login.js'],
         'registered': ['./src/page/registered/registered.js'],
+        'details': ['./src/page/details/details.js'],
     },
     output: {
         path: './dist',
@@ -55,7 +56,8 @@ var config = {
             util: __dirname + '/src/util',
             page: __dirname + '/src/page',
             service: __dirname + '/src/service',
-            image: __dirname + '/src/image'
+            image: __dirname + '/src/image',
+            json : __dirname +'/src/json'
         }
     },
     plugins: [
@@ -71,6 +73,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
         new HtmlWebpackPlugin(getHtmlConfig('login', '用户登录')),
         new HtmlWebpackPlugin(getHtmlConfig('registered', '用户注册')),
+        new HtmlWebpackPlugin(getHtmlConfig('details', '详情页')),
 
     ]
 };

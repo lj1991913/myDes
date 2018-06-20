@@ -1,0 +1,47 @@
+					{{#list}}
+					<div class="home-tab-main-all-item">
+							<div class="home-tab-main-all-item-t1">
+								<div class="home-tab-main-all-left">
+								 	<a href="/details.html?id={{id}}&type={{type}}"><img src="" alt=""></a>	
+								</div>
+								<div class="home-tab-main-all-center">
+									<div class="productName"><a href="/details.html?id={{id}}&type={{type}}">{{product_name}}</a></div>
+									<div class="attrAddress">景点地址：{{address}}</div>
+									<div class="destination">目的地：{{destination}}</div>
+								</div>
+								<div class="home-tab-main-all-right">
+									<div class="lookInfo">
+										查看详情
+									</div>
+								</div>
+							</div>
+							<div class="home-tab-main-all-item-b1">
+								<div class="home-tab-main-all-item-b1-title">
+									<div class="home-tab-main-all-item-b1-mp bb1">
+										<div class="mp">门票</div>
+									</div>
+									<div class="home-tab-main-all-item-b1-sj bb2">市值价</div>
+									<div class="home-tab-main-all-item-b1-td bb3">驴妈妈价</div>
+									<div class="home-tab-main-all-item-b1-fs bb4">支付方式</div>
+								</div>
+								<div class="home-tab-main-all-item-b1-cont">
+									<div class="home-tab-main-all-item-b1-cont-t1 bb1">{{item.tickets}}</div>
+									<div class="home-tab-main-all-item-b1-cont-t2 bb2">{{item.market_price}}</div>
+									<div class="home-tab-main-all-item-b1-cont-t3 bb3">{{item.unique_price}}</div>
+									<div class="home-tab-main-all-item-b1-cont-t4 bb4">
+										在线支付
+										<div class="yd">预订</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						</div>
+
+						{{/list}}
+
+						{{^list}}
+						    <p class="err-tip">很抱歉，实在找不到您要的商品。</p>
+						{{/list}}
+												
