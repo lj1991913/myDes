@@ -10,6 +10,7 @@ var _zz = require('util/zz.js');
 var common = {
 	init : function(){
 		this.search();
+		this.tops();
 	},
 	search : function(){
 		var $tool,$searchUl,$searchInput,$searchBut,$searchType,that;
@@ -46,6 +47,15 @@ var common = {
 	},
 	submit : function(){
 
+	},
+	tops : function(){
+		$('#login').click(function(){
+			window.location.href = 'login.html'
+		});
+
+		$('#reg').click(function(){
+			window.location.href = 'registered.html'
+		});
 	}
 };
 

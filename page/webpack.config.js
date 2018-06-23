@@ -24,6 +24,7 @@ var config = {
         'login': ['./src/page/login/login.js'],
         'registered': ['./src/page/registered/registered.js'],
         'details': ['./src/page/details/details.js'],
+        'order' : ['./src/page/order/order.js'],
     },
     output: {
         path: './dist',
@@ -74,6 +75,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('login', '用户登录')),
         new HtmlWebpackPlugin(getHtmlConfig('registered', '用户注册')),
         new HtmlWebpackPlugin(getHtmlConfig('details', '详情页')),
+        new HtmlWebpackPlugin(getHtmlConfig('order', '订单成功')),
 
     ]
 };

@@ -3,23 +3,23 @@ webpackJsonp([2],{
 /***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(90);
+	module.exports = __webpack_require__(93);
 
 
 /***/ }),
 
-/***/ 90:
+/***/ 93:
 /***/ (function(module, exports, __webpack_require__) {
 
 	
 
 	'use strict';
 
-	__webpack_require__(91);
-	var tab = __webpack_require__(93);
+	__webpack_require__(94);
+	var tab = __webpack_require__(96);
 	var _zz = __webpack_require__(11);
-	var templateIndex   = __webpack_require__(94);
-	var indexList = __webpack_require__(95);
+	var templateIndex   = __webpack_require__(97);
+	var indexList = __webpack_require__(98);
 	$(function(){
 		//请求
 		indexList.getList1(function(res){
@@ -37,14 +37,14 @@ webpackJsonp([2],{
 
 /***/ }),
 
-/***/ 91:
+/***/ 94:
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 93:
+/***/ 96:
 /***/ (function(module, exports) {
 
 	function switchTab(opts){
@@ -104,14 +104,14 @@ webpackJsonp([2],{
 
 /***/ }),
 
-/***/ 94:
+/***/ 97:
 /***/ (function(module, exports) {
 
-	module.exports = "\t\t\t\t\t{{#list}}\r\n\t\t\t\t\t<div class=\"home-tab-main-all-item\">\r\n\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-t1\">\r\n\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-left\">\r\n\t\t\t\t\t\t\t\t \t<a href=\"/details.html?id={{id}}&type={{type}}\"><img src=\"xxxHTMLLINKxxx0.60541556597444510.7992434785067681xxx\" alt=\"\"></a>\t\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-center\">\r\n\t\t\t\t\t\t\t\t\t<div class=\"productName\"><a href=\"/details.html?id={{id}}&type={{type}}\">{{product_name}}</a></div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"attrAddress\">景点地址：{{address}}</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"destination\">目的地：{{destination}}</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-right\">\r\n\t\t\t\t\t\t\t\t\t<div class=\"lookInfo\">\r\n\t\t\t\t\t\t\t\t\t\t查看详情\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1\">\r\n\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-title\">\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-mp bb1\">\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"mp\">门票</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-sj bb2\">市值价</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-td bb3\">驴妈妈价</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-fs bb4\">支付方式</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-cont\">\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-cont-t1 bb1\">{{item.tickets}}</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-cont-t2 bb2\">{{item.market_price}}</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-cont-t3 bb3\">{{item.unique_price}}</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-cont-t4 bb4\">\r\n\t\t\t\t\t\t\t\t\t\t在线支付\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"yd\">预订</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t\t{{/list}}\r\n\r\n\t\t\t\t\t\t{{^list}}\r\n\t\t\t\t\t\t    <p class=\"err-tip\">很抱歉，实在找不到您要的商品。</p>\r\n\t\t\t\t\t\t{{/list}}\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n";
+	module.exports = "\t\t\t\t\t{{#list}}\r\n\t\t\t\t\t<div class=\"home-tab-main-all-item\">\r\n\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-t1\">\r\n\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-left\">\r\n\t\t\t\t\t\t\t\t \t<a href=\"/details.html?id={{id}}&type={{type}}\"><img src=\"xxxHTMLLINKxxx0.61852377506694080.9971952433375726xxx\" alt=\"\"></a>\t\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-center\">\r\n\t\t\t\t\t\t\t\t\t<div class=\"productName\"><a href=\"/details.html?id={{id}}&type={{type}}\">{{product_name}}</a></div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"attrAddress\">景点地址：{{address}}</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"destination\">目的地：{{destination}}</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-right\">\r\n\t\t\t\t\t\t\t\t\t<div class=\"lookInfo\">\r\n\t\t\t\t\t\t\t\t\t\t查看详情\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1\">\r\n\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-title\">\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-mp bb1\">\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"mp\">门票</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-sj bb2\">市值价</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-td bb3\">驴妈妈价</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-fs bb4\">支付方式</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-cont\">\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-cont-t1 bb1\">{{item.tickets}}</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-cont-t2 bb2\">{{item.market_price}}</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-cont-t3 bb3\">{{item.unique_price}}</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-cont-t4 bb4\">\r\n\t\t\t\t\t\t\t\t\t\t在线支付\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"yd\">预订</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t\t{{/list}}\r\n\r\n\t\t\t\t\t\t{{^list}}\r\n\t\t\t\t\t\t    <p class=\"err-tip\">很抱歉，实在找不到您要的商品。</p>\r\n\t\t\t\t\t\t{{/list}}\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n";
 
 /***/ }),
 
-/***/ 95:
+/***/ 98:
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -126,6 +126,7 @@ webpackJsonp([2],{
 				"product_pic": "xxxxx.jpg",
 				"address": "xxxxxxxxxxxx",
 				"destination": "xxxxxxxx",
+				"type": 0,
 				"item": {
 					"tickets": "门票名称",
 					"market_price": "120￥",
@@ -136,6 +137,7 @@ webpackJsonp([2],{
 				"product_name": "这是名称2",
 				"product_pic": "xxxxx.jpg",
 				"address": "xxxxxxxxxxxx",
+				"type": 1,
 				"destination": "xxxxxxxx",
 				"item": {
 					"tickets": "门票名称",
@@ -147,6 +149,7 @@ webpackJsonp([2],{
 				"product_name": "这是名称3",
 				"product_pic": "xxxxx.jpg",
 				"address": "xxxxxxxxxxxx",
+				"type": 0,
 				"destination": "xxxxxxxx",
 				"item": {
 					"tickets": "门票名称",
