@@ -199,6 +199,13 @@ a:hover{
 	text-align: center;
 	margin-top: 40px;
 }
+.yd{
+	background: rgb(255, 99 , 2);
+	padding: 5px 10px;
+	color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+}
 .page-nav{
 	height: 70px;
 	display: flex;
