@@ -204,7 +204,7 @@
 	'use strict';
 	var Hogan = __webpack_require__(12); //require('hogan');
 	var serverHost = {
-		host: '127.0.0.1:8080' //请求地址的host
+		host: 'http://192.168.0.104:8080' //请求地址的host
 	};
 	var _zz = {
 		//网络请求
@@ -216,13 +216,7 @@
 				dataType : options.dataType || 'json',
 				data : options.data || {},
 				success : function(res){
-					if(res.code == 200){ //请求成功
-						typeof options.success === 'function' && options.success(res.data,res.msg);
-					}else if(res.code == 401){ //登录超时
-						that.doLogin();
-					}else{//请求失败
-						typeof options.error === 'function' && options.error(res.msg)
-					}
+					typeof options.success === 'function' && options.success(res);
 				},
 				error : function(err){
 					typeof options.error === 'function' && options.error(err.statusText);
@@ -261,6 +255,7 @@
 				var re = new RegExp(a1);
 				if (re.test(val)) {
 					//正确
+					return true;
 				} else {
 					return false;
 				}
@@ -3350,7 +3345,8 @@
 	 * @api public
 	 */
 	function lolcation(loc) {
-	  loc = loc || global.location || {};
+	  var location = global && global.location || {};
+	  loc = loc || location;
 
 	  var finaldestination = {}
 	    , type = typeof loc

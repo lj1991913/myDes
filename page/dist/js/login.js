@@ -69,14 +69,19 @@ webpackJsonp([3],{
 		},
 		submit : function(){
 			var fromData = {
-				username : $.trim($('#username').val()),
+				userName : $.trim($('#username').val()),
 				password : $.trim($('#password').val()),
 			},
 			 validateResult = this.formValidate(fromData);
 			if(validateResult.status){
 				showMsg.hide();
 				_user.login(fromData,function(res){
-					window.location.href = './index.html';
+					if(res.id!=''){
+						localStorage.setItem('userName', res.userName);
+						window.location.href = './index.html';
+					}else{
+						alert('用户名或密码错误');
+					}
 				},function(msg){
 					showMsg.show(msg)
 				})
@@ -91,14 +96,14 @@ webpackJsonp([3],{
 	            status  : false,
 	            msg     : ''
 	        };
-	        if(!_zz.validate(formData.username, 'name')){
+	       /* if(!_zz.validate(formData.username, 'name')){
 	            result.msg = '用户名不对';
 	            return result;
 	        }
 	        if(!_zz.validate(formData.password, 'password')){
 	            result.msg = '密码不对';
 	            return result;
-	        }
+	        }*/
 	        // 通过验证，返回正确提示
 	        result.status   = true;
 	        result.msg      = '验证通过';
@@ -132,7 +137,7 @@ webpackJsonp([3],{
 		//用户登录
 		login : function(userInfo,resolve,reject){
 			_zz.request({
-				url : _zz.getServerHost + '',
+				url : _zz.getServerHost() + '/user/login',
 				data : userInfo,
 				method : 'POST',
 				success : resolve,
@@ -142,7 +147,7 @@ webpackJsonp([3],{
 		//检查用户名
 		checkUserName : function(useName,resolve,reject){
 			_zz.request({
-				url : _zz.getServerHost + '',
+				url : _zz.getServerHost() + '/user/checkSame',
 				data : useName,
 				method : 'POST',
 				success : resolve,
@@ -152,9 +157,9 @@ webpackJsonp([3],{
 		//注册
 		regUser : function(userInfo,resolve,reject){
 			_zz.request({
-				url : _zz.getServerHost +'',
+				url : _zz.getServerHost() +'/user/save',
 				data : userInfo,
-				method : 'POST',
+				method : 'POST',	
 				success : resolve,
 				error : reject
 			})

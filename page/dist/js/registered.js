@@ -21,7 +21,7 @@ webpackJsonp([5],{
 		//用户登录
 		login : function(userInfo,resolve,reject){
 			_zz.request({
-				url : _zz.getServerHost + '',
+				url : _zz.getServerHost() + '/user/login',
 				data : userInfo,
 				method : 'POST',
 				success : resolve,
@@ -31,7 +31,7 @@ webpackJsonp([5],{
 		//检查用户名
 		checkUserName : function(useName,resolve,reject){
 			_zz.request({
-				url : _zz.getServerHost + '',
+				url : _zz.getServerHost() + '/user/checkSame',
 				data : useName,
 				method : 'POST',
 				success : resolve,
@@ -41,9 +41,9 @@ webpackJsonp([5],{
 		//注册
 		regUser : function(userInfo,resolve,reject){
 			_zz.request({
-				url : _zz.getServerHost +'',
+				url : _zz.getServerHost() +'/user/save',
 				data : userInfo,
-				method : 'POST',
+				method : 'POST',	
 				success : resolve,
 				error : reject
 			})
@@ -74,6 +74,25 @@ webpackJsonp([5],{
 			});
 			$('.reg-right-input-warp input').blur(function(e) {
 				that.checkInput(e);
+				//用户名失去焦点判断是否重复
+				if ($(this).attr('id') == 'name') {
+					var userName = $.trim($(this).val());
+					if (userName != '') {
+						var  data ={
+							userName : userName
+						};
+						_use.checkUserName(data, function(res) {
+							if (res) {
+								alert('用户名重复');
+							} else {
+
+							}
+						}, function(msg) {
+
+						});
+					}
+
+				}
 			});
 			$('#nameMask,#phoneMask,#passwordMask,#apasswordMask').click(function() {
 				$(this).hide();
@@ -82,7 +101,7 @@ webpackJsonp([5],{
 			//判断密码强度
 			$('#password').keydown(function() {
 				var val = $.trim($(this).val());
-				if (val.length > 7) {
+				if (val.length > 0) {
 					if (val.length > 7 && val.length <= 10) { //弱
 						that.setPassword(0);
 					} else if (val.length > 8 && val.length <= 13) { //中
@@ -95,31 +114,36 @@ webpackJsonp([5],{
 		},
 		reg: function() {
 			var data = {
-				"name": $.trim($('#name').val()),
-				"phone": $.trim($('#phone').val()),
+				"userName": $.trim($('#name').val()),
+				"phoneNum": $.trim($('#phone').val()),
 				"password": $.trim($('#password').val()),
 			};
-			validateResult = this.formValidate(fromData);
-
+			var validateResult = this.formValidate(data);
+			if (validateResult.status) {
+				_use.regUser(data, function(res) {
+					console.log(res);
+				}, function(msg) {
+					console.log(msg)
+				});
+			}
 		},
 		formValidate: function(formData) {
 			var result = {
 				status: false,
 				msg: ''
 			};
-			if (!_zz.validate(formData.name, 'name')) {
+			/*if (!_zz.validate(formData.name, 'name')) {
 				result.msg = '用户名不对';
 				return result;
-			}
-
-			if (!_zz.validate(formData.phone, 'phone')) {
-				result.msg = '用户名不对';
+			}*/
+			/*if (!_zz.validate(formData.phone, 'phone')) {
+				result.msg = '手机号码不对';
 				return result;
 			}
 			if (!_zz.validate(formData.password, 'password')) {
 				result.msg = '密码不对';
 				return result;
-			}
+			}*/
 			// 通过验证，返回正确提示
 			result.status = true;
 			result.msg = '验证通过';
@@ -160,6 +184,8 @@ webpackJsonp([5],{
 			} else {
 				$('#apasswordMask').hide();
 			}
+
+
 
 		},
 		setPassword: function(index) {

@@ -8,7 +8,7 @@ webpackJsonp([4],{
 
 /***/ }),
 
-/***/ 96:
+/***/ 92:
 /***/ (function(module, exports) {
 
 	function switchTab(opts){
@@ -76,7 +76,7 @@ webpackJsonp([4],{
 	'use strict';
 
 	__webpack_require__(107);
-	var tab = __webpack_require__(96);
+	var tab = __webpack_require__(92);
 	var _zz = __webpack_require__(11);
 
 	$(function(){
