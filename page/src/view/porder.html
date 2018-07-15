@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%= require('html-loader!./layout/head-comm.html') %>
+	<title></title>
+</head>
+<body>
+	<%= require('html-loader!./layout/top-comm.html') %>
+	<div class="warp-main">
+		<div class="porder-warp">
+			<div id="name" class="porder-title">产品名称</div>
+
+			<div class="porder-padd">
+			
+			<div class="porder-type">商品名称（票种）<span>^</span></div>
+
+			<div class="proder-cont">
+				<div class="proder-rel">
+					<div id="proderCont" class="proder-cont-warp">
+						<div class="proder-cont-item f">
+							<div class="proder-cont-item-left">费用包含</div>
+							<div class="proder-cont-item-right">上海欢乐谷单人行年卡一张</div>
+						</div>
+
+						<div class="proder-cont-item f">
+							<div class="proder-cont-item-left">费用包含</div>
+							<div class="proder-cont-item-right">上海欢乐谷单人行年卡一张</div>
+						</div>
+
+						<div class="proder-cont-item f">
+							<div class="proder-cont-item-left">入园方式</div>
+							<div class="proder-cont-item-right">上海欢乐谷单人行年卡一张</div>
+						</div>
+						
+					</div>
+				</div>
+
+			</div>
+
+			<div class="porder-date">
+				日期：
+				<div class="porder-date-warp">
+					
+				</div>
+			</div>
+
+			<div class="porder-number">
+				数量：
+				<div class="porder-number-warp">
+					<div class="porder-number-s">-</div>
+					<div class="porder-number-cont">1</div>
+					<div class="porder-number-p">+</div>
+				</div>
+			</div>
+			</div>
+
+			<div class="porder-title">游玩人信息</div>
+
+			<div class="porder-padd">
+				<div class="porder-info-item">
+					<span>*</span>姓名：
+					<div class="porder-info-input">
+						<input type="text" placeholder="请输入姓名">
+					</div>
+				</div>
+
+				<div class="porder-info-item">
+					<span>*</span>手机号码：
+					<div class="porder-info-input">
+						<input type="text" placeholder="请输入手机号">
+					</div>
+					订单信息会发送至您的手机，请保证手机畅通
+				</div>
+
+				<div class="porder-info-item">
+					<span>*</span>邮箱：
+					<div class="porder-info-input">
+						<input type="text" placeholder="请输入常用邮箱地址">
+					</div>
+				</div>
+
+				<div class="porder-info-item">
+					<span>*</span>证件：
+					<div class="porder-info-input sfz">
+						 <select name="" id="">
+						 	<option value="身份证">身份证</option>
+						 </select>
+					</div>
+					<div class="porder-info-input">
+						<input type="text" placeholder="证件号码">
+					</div>
+					该证件为入园凭证或购买保险凭证，请准确填写
+				</div>
+			</div>
+
+			<div class="porder-title">费用明细</div>
+			<div class="porder-padd">
+				
+			
+			<div class="porder-mingxi">
+				<div class="porder-mingxi-left">产品名称+商品名称</div>
+				<div class="porder-mingxi-right">单价*数量</div>
+			</div>
+			<div class="porder-zongjia">
+				应付总价：    总价
+			</div>
+
+
+			<div class="porder-pay">
+				<div id="pay" class="porder-pay-lijie">
+					立即付款
+				</div>
+				<input type="checkbox" checked='true'>我已同意以下预订须知和及合同条款
+			</div>
+
+			</dv>
+
+
+
+			<!--条款-->
+			<div class="porder-xuzhi">
+				<div class="porder-xuzhi-title">
+					预订须知
+				</div>
+				<div class="porder-xuzhi-cont">
+					
+				</div>
+			</div>
+			<!--条款-->
+
+		</div>
+	</div>
+	
+	<%= require('html-loader!./layout/fot-comm.html') %>
+</body>
+</html>

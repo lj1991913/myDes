@@ -78,7 +78,7 @@
 /******/ 			script.charset = 'utf-8';
 /******/ 			script.async = true;
 
-/******/ 			script.src = __webpack_require__.p + "" + chunkId + ".js/" + ({"1":"details","2":"index","3":"login","4":"order","5":"registered"}[chunkId]||chunkId) + ".js";
+/******/ 			script.src = __webpack_require__.p + "" + chunkId + ".js/" + ({"1":"details","2":"index","3":"login","4":"order","5":"porder","6":"registered"}[chunkId]||chunkId) + ".js";
 /******/ 			head.appendChild(script);
 /******/ 		}
 /******/ 	};
@@ -266,6 +266,16 @@
 		},
 		goHome: function() {
 			window.location.href = './index.html'
+		},
+		setCookie : function(key,val,time){
+			document.cookie=key + '=' + val;
+		},
+		getCookie : function(key){
+			var c = document.cookie;
+			return c;
+		},
+		delCookie : function(key){
+			
 		}
 
 
@@ -3345,8 +3355,7 @@
 	 * @api public
 	 */
 	function lolcation(loc) {
-	  var location = global && global.location || {};
-	  loc = loc || location;
+	  loc = loc || global.location || {};
 
 	  var finaldestination = {}
 	    , type = typeof loc

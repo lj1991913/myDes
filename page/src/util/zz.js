@@ -63,6 +63,16 @@ var _zz = {
 	},
 	goHome: function() {
 		window.location.href = './index.html'
+	},
+	setCookie : function(key,val,time){
+		document.cookie=key + '=' + val;
+	},
+	getCookie : function(key){
+		var c = document.cookie;
+		return c;
+	},
+	delCookie : function(key){
+		
 	}
 
 
