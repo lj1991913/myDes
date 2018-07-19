@@ -78,7 +78,7 @@
 /******/ 			script.charset = 'utf-8';
 /******/ 			script.async = true;
 
-/******/ 			script.src = __webpack_require__.p + "" + chunkId + ".js/" + ({"1":"details","2":"index","3":"login","4":"order","5":"porder","6":"registered"}[chunkId]||chunkId) + ".js";
+/******/ 			script.src = __webpack_require__.p + "" + chunkId + ".js/" + ({"1":"details","2":"index","3":"login","4":"order","5":"porder","6":"query","7":"registered"}[chunkId]||chunkId) + ".js";
 /******/ 			head.appendChild(script);
 /******/ 		}
 /******/ 	};
@@ -3355,7 +3355,8 @@
 	 * @api public
 	 */
 	function lolcation(loc) {
-	  loc = loc || global.location || {};
+	  var location = global && global.location || {};
+	  loc = loc || location;
 
 	  var finaldestination = {}
 	    , type = typeof loc

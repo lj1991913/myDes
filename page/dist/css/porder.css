@@ -102,3 +102,24 @@
 	line-height: 30px;
 	border: 0;
 }
+.porder-mingxi{
+	display: flex;
+	justify-content: space-between; 
+	margin-bottom: 10px;
+}
+.porder-zongjia{
+	text-align: right;
+	margin-bottom: 10px;
+}
+.porder-pay{
+	text-align: center;
+}
+.porder-pay-lijie{
+	display: inline-block; 
+	padding: 10px 30px;
+	color: #fff;
+	background: #f80;
+	border-radius: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+}
