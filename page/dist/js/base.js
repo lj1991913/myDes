@@ -78,7 +78,7 @@
 /******/ 			script.charset = 'utf-8';
 /******/ 			script.async = true;
 
-/******/ 			script.src = __webpack_require__.p + "" + chunkId + ".js/" + ({"1":"details","2":"index","3":"login","4":"order","5":"porder","6":"query","7":"registered"}[chunkId]||chunkId) + ".js";
+/******/ 			script.src = __webpack_require__.p + "" + chunkId + ".js/" + ({"1":"details","2":"index","3":"login","4":"order","5":"orderHistory","6":"porder","7":"query","8":"registered"}[chunkId]||chunkId) + ".js";
 /******/ 			head.appendChild(script);
 /******/ 		}
 /******/ 	};
@@ -123,13 +123,14 @@
 			this.tops();
 		},
 		search : function(){
-			var $tool,$searchUl,$searchInput,$searchBut,$searchType,that;
+			var $tool,$searchUl,$searchInput,$searchBut,$searchType,that,$myOrder;
 			that = this;
 			$tool = $('.search-left').find('span');
 			$searchUl = $('#searchDown');
 			$searchInput = $('#searchInput');
 			$searchBut = $('#searchBut');
 			$searchType = $('#searchType');
+			$myOrder = $('#myOrder');
 			$tool.click(function(){
 				//显示|隐藏下拉框
 				if($searchUl.is(':hidden')){
@@ -149,14 +150,18 @@
 				$tool.removeClass('active');
 				$searchUl.hide();
 			});
-
 			//搜索
 			$searchBut.click(function(){
 				that.submit();
 			});
+			//我的订单记录
+			$myOrder.click(function(){
+				window.location.href = 'orderHistory.html';
+			});
 		},
 		submit : function(){
-
+			var key = $('#searchInput').val();
+			window.location.href='query.html?key=' + encodeURIComponent(key);
 		},
 		tops : function(){
 			$('#login').click(function(){

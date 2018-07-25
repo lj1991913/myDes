@@ -48,6 +48,7 @@
 	align-items: center;
 	justify-content: center;
 	border-left: 1px solid #dd3377;
+	cursor: pointer; 
 }
 .search-right{
 	flex: 1;

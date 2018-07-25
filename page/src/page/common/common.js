@@ -13,13 +13,14 @@ var common = {
 		this.tops();
 	},
 	search : function(){
-		var $tool,$searchUl,$searchInput,$searchBut,$searchType,that;
+		var $tool,$searchUl,$searchInput,$searchBut,$searchType,that,$myOrder;
 		that = this;
 		$tool = $('.search-left').find('span');
 		$searchUl = $('#searchDown');
 		$searchInput = $('#searchInput');
 		$searchBut = $('#searchBut');
 		$searchType = $('#searchType');
+		$myOrder = $('#myOrder');
 		$tool.click(function(){
 			//显示|隐藏下拉框
 			if($searchUl.is(':hidden')){
@@ -39,14 +40,18 @@ var common = {
 			$tool.removeClass('active');
 			$searchUl.hide();
 		});
-
 		//搜索
 		$searchBut.click(function(){
 			that.submit();
 		});
+		//我的订单记录
+		$myOrder.click(function(){
+			window.location.href = 'orderHistory.html';
+		});
 	},
 	submit : function(){
-
+		var key = $('#searchInput').val();
+		window.location.href='query.html?key=' + encodeURIComponent(key);
 	},
 	tops : function(){
 		$('#login').click(function(){
