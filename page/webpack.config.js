@@ -26,6 +26,8 @@ var config = {
         'details': ['./src/page/details/details.js'],
         'order' : ['./src/page/order/order.js'],
         'porder' : ['./src/page/porder/porder.js'],
+        'query' :['./src/page/query/query.js'],
+        'orderHistory' : ['./src/page/orderHistory/orderHistory.js']
     },
     output: {
         path: './dist',
@@ -78,6 +80,8 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('details', '详情页')),
         new HtmlWebpackPlugin(getHtmlConfig('order', '订单成功')),
         new HtmlWebpackPlugin(getHtmlConfig('porder', '下单页')),
+        new HtmlWebpackPlugin(getHtmlConfig('query', '搜索页')),
+        new HtmlWebpackPlugin(getHtmlConfig('orderHistory', '订单历史页')),
 
     ]
 };

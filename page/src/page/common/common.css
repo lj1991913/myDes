@@ -171,6 +171,9 @@ a:hover{
 .top-user-warp{
 	height: 30px;
 	line-height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 .top-user-warp .top-1{
 	display: flex;
@@ -179,6 +182,15 @@ a:hover{
 	line-height: 30px;
 	cursor: pointer;
 }
+
+.top-user-warp .myorder{
+	display: flex;
+	align-items: center;
+	height: 30px;
+	line-height: 30px;
+	cursor: pointer;
+}
+
 .top-user-warp .top-user-name:hover{
 	text-decoration: underline;
 	color: #f80;
