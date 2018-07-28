@@ -39,6 +39,7 @@
 	width: 140px;
 	height: 30px; 
 	border: 1px solid #ccc ;
+	cursor: pointer;
 }
 .porder-number{
 	display: flex;
@@ -101,4 +102,128 @@
 	height: 30px;
 	line-height: 30px;
 	border: 0;
+}
+.porder-mingxi{
+	display: flex;
+	justify-content: space-between; 
+	margin-bottom: 10px;
+}
+.porder-zongjia{
+	text-align: right;
+	margin-bottom: 10px;
+}
+.porder-pay{
+	text-align: center;
+}
+.porder-pay-lijie{
+	display: inline-block; 
+	padding: 10px 30px;
+	color: #fff;
+	background: #f80;
+	border-radius: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+
+.input-warp{
+	position: absolute;
+	left: 300px;
+	top: 200px;
+	width: 200px;
+	height: 30px;
+	border:1px solid #ccc;
+}
+.input-warp input{
+	background: #fff;
+	border:0;
+	width: 100%;
+	height: 100%;
+}
+.input-rel{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.calendar-warp{
+	position: absolute;
+	left: 0;
+	top: 31px;
+	width: 562.5px;
+}
+.calendar-top{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	background: #ee3388;
+	display: flex;
+	align-items:center;
+	justify-content: space-between;
+	padding: 0 10px;
+}
+.calendar-center-data{
+
+}
+.calendar-center{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	display: flex;
+	align-items: center;
+	border-left: 1px solid #ccc;
+}
+.calendar-center-item{
+	flex: 1;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	border-right: 1px solid #ccc;
+	background: #eee;
+}
+.calendar-center-item.fj{
+	color: #f00;
+}
+
+.calendar-bot{
+	display: flex;
+	flex-wrap: wrap;
+	border-left: 1px solid #ccc;
+	height: 430px;
+}
+
+.calendar-bot-item{
+	height: 70px;
+	width: 80px;
+	padding: 10px;
+	color: #333;
+	position: relative;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+} 
+.calendar-bot-item.hui{
+	background: #e0e0e0;
+}
+.calendar-bot-item span{
+	position: absolute;
+}
+.calendar-bot-item span.days{
+	left: 10px;
+	top: 10px;
+}
+
+.calendar-bot-item span.rest{
+	right: 0px;
+	top: 0px;
+	background: #66cc33;
+	color: #fff;
+	padding: 2px;
+	display: none;
+}
+
+.calendar-bot-item span.price{
+	left: 10px;
+	bottom: 10px;
+	color: #ff6600;
+	display: none;
 }
