@@ -2,12 +2,11 @@
 					<div class="home-tab-main-all-item">
 							<div class="home-tab-main-all-item-t1">
 								<div class="home-tab-main-all-left">
-								 	<a href="/details.html?id={{id}}&type={{type}}"><img src="" alt=""></a>	
+								 	<a href="/details.html?id={{id}}"><img src="http://192.168.0.103:8080/goods/pic?path={{pic.picUrl}}" alt=""></a>	
 								</div>
 								<div class="home-tab-main-all-center">
-									<div class="productName"><a href="/details.html?id={{id}}&type={{type}}">{{product_name}}</a></div>
+									<div class="productName"><a href="/details.html?id={{id}}">{{name}}</a></div>
 									<div class="attrAddress">景点地址：{{address}}</div>
-									<div class="destination">目的地：{{destination}}</div>
 								</div>
 								<div class="home-tab-main-all-right">
 									<div class="lookInfo">
@@ -25,9 +24,7 @@
 									<div class="home-tab-main-all-item-b1-fs bb4">支付方式</div>
 								</div>
 								<div class="home-tab-main-all-item-b1-cont">
-									<div class="home-tab-main-all-item-b1-cont-t1 bb1">{{item.tickets}}</div>
-									<div class="home-tab-main-all-item-b1-cont-t2 bb2">{{item.market_price}}</div>
-									<div class="home-tab-main-all-item-b1-cont-t3 bb3">{{item.unique_price}}</div>
+									<div class="home-tab-main-all-item-b1-cont-t3 bb3">{{price}}</div>
 									<div class="home-tab-main-all-item-b1-cont-t4 bb4">
 										在线支付
 										<div class="yd">预订</div>

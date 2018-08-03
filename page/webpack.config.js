@@ -31,7 +31,7 @@ var config = {
     },
     output: {
         path: './dist',
-        publicPath: '/',
+        publicPath: '../',
         filename: 'js/[name].js'
     },
     devServer: {

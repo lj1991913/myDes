@@ -53,6 +53,7 @@ Calendar.prototype = {
 				}
 				
 				$('#rl').append(str);
+				console.log(str);
 		　　}
 		}
 	},
@@ -61,3 +62,5 @@ Calendar.prototype = {
 		return (year%100==0?res=(year%400==0?1:0):res=(year%4==0?1:0));
 	}
 };
+
+module.exports = Calendar;

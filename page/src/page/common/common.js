@@ -41,18 +41,13 @@ var common = {
 			$searchUl.hide();
 		});
 		//搜索
-		$searchBut.click(function(){
-			that.submit();
-		});
+		
 		//我的订单记录
 		$myOrder.click(function(){
 			window.location.href = 'orderHistory.html';
 		});
 	},
-	submit : function(){
-		var key = $('#searchInput').val();
-		window.location.href='query.html?key=' + encodeURIComponent(key);
-	},
+	
 	tops : function(){
 		$('#login').click(function(){
 			window.location.href = 'login.html'

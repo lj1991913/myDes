@@ -90,7 +90,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "../";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -151,18 +151,13 @@
 				$searchUl.hide();
 			});
 			//搜索
-			$searchBut.click(function(){
-				that.submit();
-			});
+			
 			//我的订单记录
 			$myOrder.click(function(){
 				window.location.href = 'orderHistory.html';
 			});
 		},
-		submit : function(){
-			var key = $('#searchInput').val();
-			window.location.href='query.html?key=' + encodeURIComponent(key);
-		},
+		
 		tops : function(){
 			$('#login').click(function(){
 				window.location.href = 'login.html'
@@ -209,7 +204,7 @@
 	'use strict';
 	var Hogan = __webpack_require__(12); //require('hogan');
 	var serverHost = {
-		host: 'http://192.168.0.104:8080' //请求地址的host
+		host: 'http://192.168.0.103:8080' //请求地址的host
 	};
 	var _zz = {
 		//网络请求

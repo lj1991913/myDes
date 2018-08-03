@@ -3,11 +3,9 @@
 var _zz = require('util/zz.js');
 
 var indexList = {
-	getList1: function(name,page,resolve, reject) {
-			var n = name || "";
-			var p = page || 1;
+	getDetail: function(id,resolve, reject) {
 			_zz.request({
-				url : _zz.getServerHost() +'/index/goods?page=' + p +'&name=' + n,
+				url : _zz.getServerHost() +'/index/goods/detail?id=' + id,
 				success : resolve,
 				error : reject
 			});

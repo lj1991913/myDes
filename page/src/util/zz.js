@@ -1,7 +1,7 @@
 'use strict';
 var Hogan = require('hogan.js'); //require('hogan');
 var serverHost = {
-	host: 'http://192.168.0.104:8080' //请求地址的host
+	host: 'http://192.168.0.103:8080' //请求地址的host
 };
 var _zz = {
 	//网络请求
