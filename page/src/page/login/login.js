@@ -63,8 +63,10 @@ var page ={
 		if(validateResult.status){
 			showMsg.hide();
 			_user.login(fromData,function(res){
+				console.log(res);
 				if(res.id!=''){
 					localStorage.setItem('userName', res.userName);
+					localStorage.setItem('userId', res.id);
 					window.location.href = './index.html';
 				}else{
 					alert('用户名或密码错误');

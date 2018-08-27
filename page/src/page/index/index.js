@@ -46,9 +46,4 @@ var index = {
 $(function(){
 	index.init();
 	//请求
-	
-
-
-	
-
 }); 

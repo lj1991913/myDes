@@ -157,4 +157,16 @@
 .details-cont2-items-right-list-shou{
 	text-align: right;
 	cursor: pointer;
-} 
+}
+.details-to{
+	display: flex;
+	justify-content: center;
+}
+.details-to a{
+	display: block;
+	padding: 5px 20px;
+	color: #fff;
+	font-size: 14px;
+	background-color: #ff8800;
+	border-radius: 10px;
+}

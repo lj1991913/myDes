@@ -1,0 +1,14 @@
+						<div class="proder-cont-item f">
+							<div class="proder-cont-item-left">费用包含：</div>
+							<div class="proder-cont-item-right">{{list.priceInclude}}</div>
+						</div>
+
+						<div class="proder-cont-item f">
+							<div class="proder-cont-item-left">费用不包含：</div>
+							<div class="proder-cont-item-right">{{list.priceNotInclude}}</div>
+						</div>
+
+						<div class="proder-cont-item f">
+							<div class="proder-cont-item-left">入园时间：</div>
+							<div class="proder-cont-item-right">{{list.ticTime}}</div>
+						</div>

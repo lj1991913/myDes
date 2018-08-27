@@ -1,0 +1,11 @@
+{{#list}}
+<div class="orderHistory-item">
+					<div class="orderHistory-list">{{goodsName}}</div>
+					<div class="orderHistory-list">{{goodsPrice}}</div>
+					<div class="orderHistory-list">{{goodsNum}}</div>
+				</div>
+{{/list}}
+
+{{^list}}
+						    <p class="err-tip">很抱歉，还没有订单信息</p>
+						{{/list}}

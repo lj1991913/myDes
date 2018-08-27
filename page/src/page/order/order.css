@@ -44,3 +44,17 @@
 	margin-top: 10px;
 	cursor: pointer;
 }
+
+.order-cg{
+	text-align: center;
+	font-size: 18px;
+	color: #ccc;
+	padding-top: 100px;
+}
+.back-home{
+	text-align: center;
+}
+.back-home a{
+	color: #f80;
+
+}

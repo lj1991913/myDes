@@ -3,20 +3,20 @@ webpackJsonp([3],{
 /***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(100);
+	module.exports = __webpack_require__(27);
 
 
 /***/ }),
 
-/***/ 100:
+/***/ 27:
 /***/ (function(module, exports, __webpack_require__) {
 
 	
 
 	'use strict';
 
-	__webpack_require__(101);
-	var _user = __webpack_require__(106);
+	__webpack_require__(28);
+	var _user = __webpack_require__(15);
 	var _zz = __webpack_require__(11);
 
 	var showMsg ={
@@ -76,8 +76,10 @@ webpackJsonp([3],{
 			if(validateResult.status){
 				showMsg.hide();
 				_user.login(fromData,function(res){
+					console.log(res);
 					if(res.id!=''){
 						localStorage.setItem('userName', res.userName);
+						localStorage.setItem('userId', res.id);
 						window.location.href = './index.html';
 					}else{
 						alert('用户名或密码错误');
@@ -117,55 +119,10 @@ webpackJsonp([3],{
 
 /***/ }),
 
-/***/ 101:
+/***/ 28:
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 106:
-/***/ (function(module, exports, __webpack_require__) {
-
-	
-
-	'use strict';
-
-	var _zz = __webpack_require__(11);
-
-	var _user ={
-		//用户登录
-		login : function(userInfo,resolve,reject){
-			_zz.request({
-				url : _zz.getServerHost() + '/user/login',
-				data : userInfo,
-				method : 'POST',
-				success : resolve,
-				error : reject
-			})
-		},
-		//检查用户名
-		checkUserName : function(useName,resolve,reject){
-			_zz.request({
-				url : _zz.getServerHost() + '/user/checkSame',
-				data : useName,
-				method : 'POST',
-				success : resolve,
-				error : reject
-			})
-		},
-		//注册
-		regUser : function(userInfo,resolve,reject){
-			_zz.request({
-				url : _zz.getServerHost() +'/user/save',
-				data : userInfo,
-				method : 'POST',	
-				success : resolve,
-				error : reject
-			})
-		}
-	}
-	module.exports = _user;
 
 /***/ })
 

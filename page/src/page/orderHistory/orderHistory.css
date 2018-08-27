@@ -1,0 +1,24 @@
+
+.orderHistory-top{
+	display: flex;
+
+}
+.orderHistory-top-item{
+	border-bottom: 2px solid #ee3388;
+	padding: 5px 0;
+	text-align: center;
+	font-size: 14px;
+	color: #000;
+	flex:1;
+}
+
+.orderHistory-item{
+	display: flex;
+	border-bottom: 1px solid #ccc;
+}
+.orderHistory-list{
+	flex:1;
+	padding: 15px 0;
+	
+	text-align: center;
+}

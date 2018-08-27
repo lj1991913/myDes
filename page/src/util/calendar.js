@@ -21,6 +21,10 @@ Calendar.prototype = {
 		this.year = y;
 		this.month = d.getMonth()+1;
 		this.list=Math.ceil((this.m_day[this.month-1] + this.firstDay)/7);
+		if(this.month<10){
+			this.month = '0' + this.month;
+		}
+		$('#today').text(this.year+'年' + this.month +'月');
 		this.randerHtml();
 
 	},
@@ -31,29 +35,34 @@ Calendar.prototype = {
 		　　　　idx=i*7+k; //单元格自然序列号
 		　　　　date_str=idx-this.firstDay+1; //计算日期
 				var str ;
-				console.log(date_str);
 				if(date_str<=0){
 					if(this.month>1){
-						date_str = this.m_day[this.month] + date_str;
+						date_str = this.m_day[parseInt(this.month)] + date_str;
 					}else{
 						date_str = '';
 					}
 					str = '<div class="calendar-bot-item hui"><span class="days">'+date_str+'</span><span class="rest">休</span><span class="price">￥300</span></div>';
-				}else if(date_str>this.m_day[this.month-1]){
+				}else if(date_str>this.m_day[parseInt(this.month-1)]){
 					if(this.month != 12){
-						date_str =date_str - this.m_day[this.month+1] + 1 ;
+						date_str =date_str - this.m_day[parseInt(this.month-1)] + 1 ;
 					}else{
 						date_str = '';
 					}
 					str = '<div class="calendar-bot-item hui"><span class="days">'+date_str+'</span><span class="rest">休</span><span class="price">￥300</span></div>';
 				}else{
-
 					date_str=idx-this.firstDay+1;
-					str = '<div class="calendar-bot-item"><span class="days">'+date_str+'</span><span class="rest">休</span><span class="price">￥300</span></div>';
+					var d = date_str;
+					if(d<10){
+						d='0'+d;
+					}
+					if(date_str<this.day){
+						str = '<div class="calendar-bot-item huise" date="'+this.year+'-'+this.month+'-'+d+'"><span class="days">'+date_str+'</span><span class="rest">休</span><span class="price">￥300</span></div>';
+					}else{
+						str = '<div class="calendar-bot-item select-calendar" date="'+this.year+'-'+this.month+'-'+d+'"><span class="days">'+date_str+'</span><span class="rest">休</span><span class="price">￥300</span></div>';
+					}
 				}
 				
 				$('#rl').append(str);
-				console.log(str);
 		　　}
 		}
 	},

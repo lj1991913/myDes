@@ -7,28 +7,15 @@
 <body>
 	<%= require('html-loader!./layout/top-comm.html') %>
 	<div class="warp-main">
-		<div class="order-warp">
-			<div class="order-title">应付金额 <span>￥200</span></div>
-			<div class="order-cont">
-				<div id="order1" class="order-cont-item">订单号:2312313213</div>
-				<div id="order2" class="order-cont-item">产品名称:2312313213</div>
-				<div id="order3" class="order-cont-item">游玩时间:2018-06-19</div>
-				<div id="order4" class="order-cont-item">购买数量:2</div>
-			</div>
-			<div class="order-bot">
-				订单金额：￥200
-			</div>
+		
+		<div id="show1" style="display: none;">
+			<div class="order-cg">下单成功!</div>
+			<div class="back-home"><a href="/">返回首页</a></div>
 		</div>
+		<div id="show2">
 
-
-		<div class="order-warp">
-			<div class="order-title">应付金额 <span>￥200</span></div>
-			<div class="order-cont">
-				<div id="order5" class="order-cont-item">姓名:xxxx</div>
-				<div id="order6" class="order-cont-item">手机号码:2312313213</div>
-				<div id="order7" class="order-cont-item">邮箱:xxxxxxxxx</div>
-				<div id="order8" class="order-cont-item">身份证:xxxxxxxxxxxx</div>
-			</div>
+		<div id="main">
+		
 		</div>
 
 
@@ -74,7 +61,7 @@
 
 
 	</div>
-
+</div>
 
 	<%= require('html-loader!./layout/fot-comm.html') %>
 </body>

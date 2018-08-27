@@ -201,12 +201,21 @@ a:hover{
 	text-decoration: underline;
 	color: #f80;
 }
-
+.top-1{
+	width: 300px;
+}
+.top-1 div{
+	display: inline-block;
+}
 .top-user-warp #top1{
 	display: none;
 }
 .top-user-name{
 	margin-right: 5px;
+	display: inline-block;
+}
+.top-user-out{
+	display: inline-block;
 }
 .home-bot{
 	text-align: center;

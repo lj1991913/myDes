@@ -44,9 +44,9 @@ var reg = {
 		$('#password').keydown(function() {
 			var val = $.trim($(this).val());
 			if (val.length > 0) {
-				if (val.length > 7 && val.length <= 10) { //弱
+				if (val.length > 0 && val.length <= 7) { //弱
 					that.setPassword(0);
-				} else if (val.length > 8 && val.length <= 13) { //中
+				} else if (val.length > 7 && val.length <= 13) { //中
 					that.setPassword(1);
 				} else {
 					that.setPassword(2);
@@ -131,7 +131,7 @@ var reg = {
 
 	},
 	setPassword: function(index) {
-		var index = index || -1;
+		var index = index || '';
 		var $p = $('#passwordLv');
 		$p.find('.password-list').each(function(index, val) {
 			$(this).removeClass('active');

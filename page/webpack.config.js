@@ -9,11 +9,11 @@ var buildDir = path.resolve(__dirname, './dist/view');
 var getHtmlConfig = function(name, title) {
     return {
         template: './src/view/' + name + '.html',
-        filename: 'view/' + name + '.html',
+        filename: name + '.html',
         title: title,
         inject: true,
         hash: false,
-        chunks: ['common', name]
+        chunks: ['common',name]
     };
 };
 // webpack config
@@ -31,7 +31,7 @@ var config = {
     },
     output: {
         path: './dist',
-        publicPath: '../',
+        publicPath: '',
         filename: 'js/[name].js'
     },
     devServer: {
@@ -87,7 +87,7 @@ var config = {
 };
 
 if ('dev' === WEBPACK_ENV) {
-    config.entry.common.push('webpack-dev-server/client?http://localhost:8088/');
+    //config.entry.common.push('webpack-dev-server/client?http://localhost:8088/');
 }
 
 module.exports = config;

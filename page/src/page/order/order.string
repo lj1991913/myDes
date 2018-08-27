@@ -1,0 +1,23 @@
+<div class="order-warp">
+			<div class="order-title">应付金额 <span>￥{{list.totalPrice}}</span></div>
+			<div class="order-cont">
+				<div id="order1" class="order-cont-item">订单号:{{list.id}}</div>
+				<div id="order2" class="order-cont-item">产品名称:{{list.goodsName}}</div>
+				<div id="order3" class="order-cont-item">游玩时间:{{list.travelTime}}</div>
+				<div id="order4" class="order-cont-item">购买数量:{{list.goodsNum}}</div>
+			</div>
+			<div class="order-bot">
+				订单金额：￥{{list.totalPrice}}
+			</div>
+		</div>
+
+
+		<div class="order-warp">
+			<div class="order-title">应付金额 <span>￥{{list.totalPrice}}</span></div>
+			<div class="order-cont">
+				<div id="order5" class="order-cont-item">姓名:{{list.travelName}}</div>
+				<div id="order6" class="order-cont-item">手机号码:{{list.travelMobile}}</div>
+				<div id="order7" class="order-cont-item">邮箱:{{list.travelEmail}}</div>
+				<div id="order8" class="order-cont-item">身份证:{{list.travelIdNum}}</div>
+			</div>
+		</div>

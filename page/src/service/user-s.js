@@ -15,6 +15,15 @@ var _user ={
 			error : reject
 		})
 	},
+	//退出登录
+	outLogin : function(resolve,reject){
+		_zz.request({
+			url : _zz.getServerHost() + '/user/loginOut',
+			method : 'POST',
+			success : resolve,
+			error : reject
+		});
+	},
 	//检查用户名
 	checkUserName : function(useName,resolve,reject){
 		_zz.request({

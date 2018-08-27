@@ -2,7 +2,7 @@
 		<div  class="details-cont1">
 			<div class="details-title">产品名称</div>
 			<div class="details-cont1-bot">
-				<div id="imgs" class="details-cont1-bot-left" img="{{list.pic}}" imgIndex=0>
+				<div id="imgs" class="details-cont1-bot-left" img="{{list.pics}}" imgIndex=0>
 					<div class="details-cont1-bot-left-piciocn">
 						<div id="shang" class="details-cont1-bot-left-s">上</div>
 						<div id="xia" class="details-cont1-bot-left-x">下</div>
@@ -17,7 +17,7 @@
 					<div class="details-cont1-bot-item">费用包含：{{list.priceInclude}}</div>
 					<div class="details-cont1-bot-item">费用包不含：{{list.priceNotInclude}}</div>
 					<div class="details-cont1-bot-item">简介描述：{{list.introduce}}</div>
-
+					<div class="details-to" ><a id="toPlay" href="/porder.html?id={{list.id}}">预订</a></div>
 				</div>
 			</div>
 		</div>

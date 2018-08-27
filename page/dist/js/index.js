@@ -3,12 +3,12 @@ webpackJsonp([2],{
 /***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(95);
+	module.exports = __webpack_require__(22);
 
 
 /***/ }),
 
-/***/ 92:
+/***/ 19:
 /***/ (function(module, exports) {
 
 	function switchTab(opts){
@@ -68,18 +68,18 @@ webpackJsonp([2],{
 
 /***/ }),
 
-/***/ 95:
+/***/ 22:
 /***/ (function(module, exports, __webpack_require__) {
 
 	
 
 	'use strict';
 
-	__webpack_require__(96);
-	var tab = __webpack_require__(92);
+	__webpack_require__(23);
+	var tab = __webpack_require__(19);
 	var _zz = __webpack_require__(11);
-	var templateIndex   = __webpack_require__(98);
-	var indexList = __webpack_require__(99);
+	var templateIndex   = __webpack_require__(25);
+	var indexList = __webpack_require__(26);
 
 	var index = {
 		init : function(){
@@ -119,30 +119,25 @@ webpackJsonp([2],{
 	$(function(){
 		index.init();
 		//请求
-		
-
-
-		
-
 	}); 
 
 /***/ }),
 
-/***/ 96:
+/***/ 23:
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 98:
+/***/ 25:
 /***/ (function(module, exports) {
 
-	module.exports = "\t\t\t\t\t{{#list}}\r\n\t\t\t\t\t<div class=\"home-tab-main-all-item\">\r\n\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-t1\">\r\n\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-left\">\r\n\t\t\t\t\t\t\t\t \t<a href=\"/details.html?id={{id}}\"><img src=\"http://192.168.0.103:8080/goods/pic?path={{pic.picUrl}}\" alt=\"\"></a>\t\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-center\">\r\n\t\t\t\t\t\t\t\t\t<div class=\"productName\"><a href=\"/details.html?id={{id}}\">{{name}}</a></div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"attrAddress\">景点地址：{{address}}</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-right\">\r\n\t\t\t\t\t\t\t\t\t<div class=\"lookInfo\">\r\n\t\t\t\t\t\t\t\t\t\t查看详情\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1\">\r\n\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-title\">\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-mp bb1\">\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"mp\">门票</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-sj bb2\">市值价</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-td bb3\">驴妈妈价</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-fs bb4\">支付方式</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-cont\">\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-cont-t3 bb3\">{{price}}</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-cont-t4 bb4\">\r\n\t\t\t\t\t\t\t\t\t\t在线支付\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"yd\">预订</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t\t{{/list}}\r\n\r\n\t\t\t\t\t\t{{^list}}\r\n\t\t\t\t\t\t    <p class=\"err-tip\">很抱歉，实在找不到您要的商品。</p>\r\n\t\t\t\t\t\t{{/list}}\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n";
+	module.exports = "\t\t\t\t\t{{#list}}\r\n\t\t\t\t\t<div class=\"home-tab-main-all-item\">\r\n\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-t1\">\r\n\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-left\">\r\n\t\t\t\t\t\t\t\t \t<a href=\"/details.html?id={{id}}\"><img src=\"http://127.0.0.1:8080/goods/pic?path={{pic.picUrl}}\" alt=\"\"></a>\t\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-center\">\r\n\t\t\t\t\t\t\t\t\t<div class=\"productName\"><a href=\"/details.html?id={{id}}\">{{name}}</a></div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"attrAddress\">景点地址：{{address}}</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-right\">\r\n\t\t\t\t\t\t\t\t\t<div class=\"lookInfo\">\r\n\t\t\t\t\t\t\t\t\t\t查看详情\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1\">\r\n\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-title\">\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-mp bb1\">\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"mp\">门票</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-sj bb2\">市值价</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-td bb3\">驴妈妈价</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-fs bb4\">支付方式</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-cont\">\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-cont-t3 bb3\">{{price}}</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"home-tab-main-all-item-b1-cont-t4 bb4\">\r\n\t\t\t\t\t\t\t\t\t\t在线支付\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"yd\">预订</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t\t{{/list}}\r\n\r\n\t\t\t\t\t\t{{^list}}\r\n\t\t\t\t\t\t    <p class=\"err-tip\">很抱歉，实在找不到您要的商品。</p>\r\n\t\t\t\t\t\t{{/list}}\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n";
 
 /***/ }),
 
-/***/ 99:
+/***/ 26:
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';

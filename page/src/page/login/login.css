@@ -27,7 +27,6 @@
 .login-input-warp{
 	display: flex;
 	align-items: center;
-	height: 30px;
 	position:relative;
 	border: 1px solid #000;
 }

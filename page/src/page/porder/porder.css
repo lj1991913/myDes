@@ -86,7 +86,6 @@
 	color: #f00; 
 }
 .porder-info-item .porder-info-input{
-	height: 30px;
 	line-height: 30px;
 	border: 1px solid #ccc;
 }
@@ -232,4 +231,6 @@
 }
 .porder-date-val{
 	height: 30px;
-}
+	line-height: 30px;
+	text-indent: 2em;
+} 

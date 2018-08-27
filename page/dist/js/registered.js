@@ -3,62 +3,17 @@ webpackJsonp([8],{
 /***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(122);
+	module.exports = __webpack_require__(51);
 
 
 /***/ }),
 
-/***/ 106:
-/***/ (function(module, exports, __webpack_require__) {
-
-	
-
-	'use strict';
-
-	var _zz = __webpack_require__(11);
-
-	var _user ={
-		//用户登录
-		login : function(userInfo,resolve,reject){
-			_zz.request({
-				url : _zz.getServerHost() + '/user/login',
-				data : userInfo,
-				method : 'POST',
-				success : resolve,
-				error : reject
-			})
-		},
-		//检查用户名
-		checkUserName : function(useName,resolve,reject){
-			_zz.request({
-				url : _zz.getServerHost() + '/user/checkSame',
-				data : useName,
-				method : 'POST',
-				success : resolve,
-				error : reject
-			})
-		},
-		//注册
-		regUser : function(userInfo,resolve,reject){
-			_zz.request({
-				url : _zz.getServerHost() +'/user/save',
-				data : userInfo,
-				method : 'POST',	
-				success : resolve,
-				error : reject
-			})
-		}
-	}
-	module.exports = _user;
-
-/***/ }),
-
-/***/ 122:
+/***/ 51:
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
-	__webpack_require__(123);
-	var _use = __webpack_require__(106);
+	__webpack_require__(52);
+	var _use = __webpack_require__(15);
 	var _zz = __webpack_require__(11);
 
 	var reg = {
@@ -102,9 +57,9 @@ webpackJsonp([8],{
 			$('#password').keydown(function() {
 				var val = $.trim($(this).val());
 				if (val.length > 0) {
-					if (val.length > 7 && val.length <= 10) { //弱
+					if (val.length > 0 && val.length <= 7) { //弱
 						that.setPassword(0);
-					} else if (val.length > 8 && val.length <= 13) { //中
+					} else if (val.length > 7 && val.length <= 13) { //中
 						that.setPassword(1);
 					} else {
 						that.setPassword(2);
@@ -189,7 +144,7 @@ webpackJsonp([8],{
 
 		},
 		setPassword: function(index) {
-			var index = index || -1;
+			var index = index || '';
 			var $p = $('#passwordLv');
 			$p.find('.password-list').each(function(index, val) {
 				$(this).removeClass('active');
@@ -206,7 +161,7 @@ webpackJsonp([8],{
 
 /***/ }),
 
-/***/ 123:
+/***/ 52:
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

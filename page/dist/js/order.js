@@ -3,12 +3,12 @@ webpackJsonp([4],{
 /***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(107);
+	module.exports = __webpack_require__(33);
 
 
 /***/ }),
 
-/***/ 92:
+/***/ 19:
 /***/ (function(module, exports) {
 
 	function switchTab(opts){
@@ -68,33 +68,61 @@ webpackJsonp([4],{
 
 /***/ }),
 
-/***/ 107:
+/***/ 33:
 /***/ (function(module, exports, __webpack_require__) {
-
-	
 
 	'use strict';
 
-	__webpack_require__(108);
-	var tab = __webpack_require__(92);
+	__webpack_require__(34);
+	var tab = __webpack_require__(19);
 	var _zz = __webpack_require__(11);
-
-	$(function(){
-
+	var templateIndex = __webpack_require__(36);
+	$(function() {
 
 		var f1 = new tab({
-			tabTarget : $('#zf1')
+			tabTarget: $('#zf1')
 		});
 		f1.init();
-		
+
+		var info = _zz.getlocalStorage('orderInfo');
+		info = JSON.parse(info);
+		var t = info.travelTime,y,m,d;
+		t  = new Date(t);
+		y = t.getFullYear();
+		m = t.getMonth() + 1;
+		d = t.getDate();
+		if(m<10){
+			m = '0' + m;
+		}
+		if(d<10){
+			d='0' + d;
+		}
+		t = y+'-'+m+'-' + d;
+		info.travelTime = t;
+		var html = _zz.renderHtml(templateIndex, {
+			list: info
+		});
+		$('#main').append(html);
+
+		$(document).on('click','.order-liji-zf',function(){
+			$('#show1').show();
+			$('#show2').hide();
+		});
 	})
 
 /***/ }),
 
-/***/ 108:
+/***/ 34:
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 36:
+/***/ (function(module, exports) {
+
+	module.exports = "<div class=\"order-warp\">\r\n\t\t\t<div class=\"order-title\">应付金额 <span>￥{{list.totalPrice}}</span></div>\r\n\t\t\t<div class=\"order-cont\">\r\n\t\t\t\t<div id=\"order1\" class=\"order-cont-item\">订单号:{{list.id}}</div>\r\n\t\t\t\t<div id=\"order2\" class=\"order-cont-item\">产品名称:{{list.goodsName}}</div>\r\n\t\t\t\t<div id=\"order3\" class=\"order-cont-item\">游玩时间:{{list.travelTime}}</div>\r\n\t\t\t\t<div id=\"order4\" class=\"order-cont-item\">购买数量:{{list.goodsNum}}</div>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"order-bot\">\r\n\t\t\t\t订单金额：￥{{list.totalPrice}}\r\n\t\t\t</div>\r\n\t\t</div>\r\n\r\n\r\n\t\t<div class=\"order-warp\">\r\n\t\t\t<div class=\"order-title\">应付金额 <span>￥{{list.totalPrice}}</span></div>\r\n\t\t\t<div class=\"order-cont\">\r\n\t\t\t\t<div id=\"order5\" class=\"order-cont-item\">姓名:{{list.travelName}}</div>\r\n\t\t\t\t<div id=\"order6\" class=\"order-cont-item\">手机号码:{{list.travelMobile}}</div>\r\n\t\t\t\t<div id=\"order7\" class=\"order-cont-item\">邮箱:{{list.travelEmail}}</div>\r\n\t\t\t\t<div id=\"order8\" class=\"order-cont-item\">身份证:{{list.travelIdNum}}</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n";
 
 /***/ })
 
